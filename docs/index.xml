@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My New Hugo Site</title>
+    <link>http://example.org/</link>
+    <description>Recent content on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 23 Oct 2017 09:58:18 -0500</lastBuildDate>
+    
+	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>5Q Introduction</title>
+      <link>http://example.org/docs/5q-introduction/</link>
+      <pubDate>Mon, 23 Oct 2017 09:58:18 -0500</pubDate>
+      
+      <guid>http://example.org/docs/5q-introduction/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>IFTTT Tutorial</title>
+      <link>http://example.org/docs/ifttt-tutorial/</link>
+      <pubDate>Mon, 23 Oct 2017 09:58:18 -0500</pubDate>
+      
+      <guid>http://example.org/docs/ifttt-tutorial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Zapier Tutorial</title>
+      <link>http://example.org/docs/zapier-tutorial/</link>
+      <pubDate>Mon, 23 Oct 2017 09:58:18 -0500</pubDate>
+      
+      <guid>http://example.org/docs/zapier-tutorial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>1.0.0 Beta.33</title>
+      <link>http://example.org/updates/1.0.0-beta.33/</link>
+      <pubDate>Thu, 19 Oct 2017 15:18:25 -0500</pubDate>
+      
+      <guid>http://example.org/updates/1.0.0-beta.33/</guid>
+      <description>Update 1.0.0-beta.31: The update addresses these issues.
+Welcome to the August 2017 release of Visual Studio Code. There are a number of significant updates in this version that we hope you will like, some of the key highlights include:
+ JavaScript/TypeScript refactoring - Easily extract source code into methods and functions. HTML tag auto close - Improved editor productivity with automatic close tags. Color picker in HTML - You can now use the VS Code color picker in HTML files.</description>
+    </item>
+    
+    <item>
+      <title>1.0.0 Beta.31</title>
+      <link>http://example.org/updates/1.0.0-beta.31/</link>
+      <pubDate>Thu, 19 Oct 2017 15:18:05 -0500</pubDate>
+      
+      <guid>http://example.org/updates/1.0.0-beta.31/</guid>
+      <description> give access to simulation modes for X50 and 5Q hide market place and profile sharing by default  </description>
+    </item>
+    
+    <item>
+      <title>1.0.0 Beta.30</title>
+      <link>http://example.org/updates/1.0.0-beta.30/</link>
+      <pubDate>Thu, 19 Oct 2017 15:17:39 -0500</pubDate>
+      
+      <guid>http://example.org/updates/1.0.0-beta.30/</guid>
+      <description> Redesigned home page (new UI and UX) Changed the look of the menu drop downs, and of the tooltips Optimized the proportions of the starting screen (now depending of the monitor size), to remove the scroll bars when X50 is selected Tweaks in the communication with the service (should fix various cases when the connection is lost or stuck, and needed restart of the service, the Q Desktop, or both) Added communication support for X50 devices (still need a new X50 firmware to test it)  </description>
+    </item>
+    
+    <item>
+      <title>1.0.0 Beta.29</title>
+      <link>http://example.org/updates/1.0.0-beta.29/</link>
+      <pubDate>Thu, 19 Oct 2017 15:17:08 -0500</pubDate>
+      
+      <guid>http://example.org/updates/1.0.0-beta.29/</guid>
+      <description>Macro recorder has be redone to use directly the keydown/up events as they are fired from the browser (electron). That way we do not require the presence of 5Q/X50 to do macro recording Optimized the keydown/up listeners, which were causing the text inputs to be extremely slow Now pipe zones borders are hidden when the mouse pointer is not over the keyboard area Updated the logic behind &amp;lsquo;connected&amp;rsquo; and &amp;lsquo;not connected&amp;rsquo; - now when a device is not connected, it is shown instead in &amp;lsquo;simulation&amp;rsquo;.</description>
+    </item>
+    
+    <item>
+      <title>1.0.0 Beta.28</title>
+      <link>http://example.org/updates/1.0.0-beta.28/</link>
+      <pubDate>Thu, 19 Oct 2017 14:53:17 -0500</pubDate>
+      
+      <guid>http://example.org/updates/1.0.0-beta.28/</guid>
+      <description> replaced the default browser tooltips, with bootstrap tooltips removed &amp;lsquo;home&amp;rsquo; button as obsolete use the secured &amp;lsquo;wss&amp;rsquo; instead of &amp;lsquo;ws&amp;rsquo; protocol for the web sockets for profiles and signals made the bouncing light with shorter size not forcing https when the backend URL is set to &amp;lsquo;localhost&amp;rsquo; removed the shadow around the hi-brightness option for X50 updated the french and MAC layouts images fixed the issue with not centered bottom UI elements (the effects area) save the json data formatted (instead on a single line) fixed the issue with the macro allowing to be saved without a name  </description>
+    </item>
+    
+  </channel>
+</rss>
