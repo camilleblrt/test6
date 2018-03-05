@@ -1,3 +1,0 @@
-<?php
-
-echo '<div id="fb-root"></div><script>(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return; js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";fjs.parentNode.insertBefore(js, fjs);}(document, \'script\', \'facebook-jssdk\'));</script><div class="top-bar" id="monthly_promotion-banner" style="background-color: #9e0b0f;"><div class="container "><div style="text-align:left;font-size:21px;color:white" >Like Us on Facebook to Win A Free Das Keyboard in our monthly raffle. <div class="fb-like" data-href="http://www.facebook.com/daskeyboard" data-layout="standard" data-action="like" data-show-faces="false" data-share="false"></div></div></div></div>';    ?>

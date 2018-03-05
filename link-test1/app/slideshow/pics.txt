@@ -1,9 +1,0 @@
-front-view-pro-1050.png; Das Keyboard Model S Professional. <p style="font-size:12px">Mechanical keyboard, glossy look, blue LEDs, and USB Hub.<br>&nbsp;</p>
-front-view-ult-1050.png; Das Keyboard Model S Ultimate - The blank keyboard. <p style="font-size:12px">This is it. Yes IT. If you want to learn touch-typing or if you want to take your typing skills to the next level, Das Keyboard Ultimate is IT.</p>
-dask3pro-hero-1050.png; Das Keyboard hero shot. <p style="font-size:12px"><br><br></p> 
-usb-hub-772.png; Das Keyboard USB hub. <p style="font-size:12px">The USB hub has two outlets on the right side of the keyboard.<br>&nbsp;</p>
-usb-hub-daughter-board-772.png;Hub and LEDs daughter board. <p style="font-size:12px">We needed the extra room to store the HUB on top of the keypad so we decided to put the logo on top of it to fill the space. Notice how the blue LEDs are white when they are off.</p> 
-blue-leds-772.png; Das Keyboard blue LEDs. <p style="font-size:12px"><br><br></p> 
-font-772.png; Das Keyboard key font type. <p style="font-size:12px">Specially chosen to convey the idea of precision.<br>&nbsp;</p> 
-glossy-772.png; Das Keyboard glossy look. <p style="font-size:12px">Das Keyboard up-to-date glossy look fit on any desk.<br>&nbsp;</p>  
-switch-772.png; This is a mechanical key switch. <p style="font-size:12px;">It's located right under each key cap and this is what makes the click when you press a key. There are 104 of these little things in every 104-key Das Keyboard.</p>

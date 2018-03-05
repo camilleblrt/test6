@@ -1,2 +1,0 @@
-[05-May-2016 03:25:32 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home2/austinwe/addons/daskeyboard/typrx/index.php:3) in /home2/austinwe/addons/daskeyboard/i18n/locales/language.php on line 3
-[05-May-2016 03:25:46 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home2/austinwe/addons/daskeyboard/typrx/index.php:3) in /home2/austinwe/addons/daskeyboard/i18n/locales/language.php on line 3
