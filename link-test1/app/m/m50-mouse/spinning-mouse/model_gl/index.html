@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+<style type='text/css'>
+body {
+	background-color: #000000;
+}
+</style>
+
+    <title>Superblaze WebGL</title>
+    <!-- <script src="lenovo_t530/ui/_ux522.js" type="text/javascript"></script> -->
+    <script src="SuperBlaze_Navigation.js" type="text/javascript"></script>
+    <script src="SSE.js" type="text/javascript"></script>
+    <script type='text/javascript'>
+        var updateId = 0;
+        var canvas = null, canvas2 = null;
+		var scene = null, scene2 = null;
+		function SuperblazeStart() 
+		{
+            try 
+            {
+				canvas = document.getElementById("superblaze-canvas");
+				if (typeof(canvas)!='undefined')
+				{
+                    var gl = canvas.getContext("experimental-webgl", { antialias: true, depth: true });
+                    if (!gl)
+                    {
+                        alert("***Could not initialise WebGL canvas");
+                    }
+                    else
+                    {
+	                    //scene = new superblaze_scene(gl, "lenovo_t530/", canvas.width, canvas.height);
+	                    //scene = new superblaze_scene(gl, "focus_hmx/", canvas.width, canvas.height);
+	                    scene = new superblaze_scene(gl, "", canvas.width, canvas.height);
+	                    //scene = new superblaze_scene(gl, "gf5/", canvas.width, canvas.height);
+	                    scene.start();
+	                    NavInit(canvas.width, canvas.height);
+	                    addMouseListeners(canvas);
+                   }
+                }
+            } 
+            catch(e) 
+            {
+                console.log(e);
+            }
+            /*try 
+            {
+				canvas2 = document.getElementById("superblaze-canvas2");
+				if (typeof(canvas2)!='undefined')
+				{
+                    var gl2 = canvas2.getContext("experimental-webgl", { antialias: true, depth: true });
+                    if (!gl2)
+                    {
+                        alert("***Could not initialise WebGL canvas2");
+                    }
+                    else
+                    {
+	                    scene2 = new Superblaze.scene(gl2, "mizuno_t11_wedge_matt/", canvas2.width, canvas2.height);
+	                    addMouseListeners(canvas2);
+                    }
+                }
+            } 
+            catch(e) 
+            {
+                console.log(e);
+            }*/
+            if (scene != null)
+            {
+                updateId = setInterval(frameUpdate, 25);
+                window.addEventListener('focus', onWindowFocus, false);
+                window.addEventListener('blur', onWindowBlur, false);
+               
+                if (typeof(onInit)!='undefined') onInit();
+            }
+		}
+		function addMouseListeners(canvas)
+		{
+            canvas.addEventListener('mousemove', mouseMove, false);
+            canvas.addEventListener('mousedown', mouseDown, false);
+            canvas.addEventListener('mouseup', mouseUp, false);
+            canvas.addEventListener('mousewheel', mouseWheel, false);
+            canvas.addEventListener('DOMMouseScroll', mouseWheel, false);
+		}
+		function onWindowFocus()
+		{
+		    if (updateId == 0)
+		        updateId = setInterval(frameUpdate, 25);
+		}
+		function onWindowBlur()
+		{
+		    if (updateId)
+		    { clearInterval(updateId); updateId = 0; }
+		}
+		function frameUpdate()
+		{
+		    //var numJobs = scene.getTotalJobs();
+		    //var numDone = numJobs-scene.getOutstandingJobs();
+		    //if (numDone != numJobs)
+    		//    console.log("Progress "+numDone+"/"+numJobs);
+
+		    // Navigation
+		    if (g_navGotoPosActive)
+                scene.clearRefine();
+		    scene.setViewMatrix(NavCreateViewMatrix(scene._initialNavMatrix));
+		    scene.setModelMatrix(NavCreateModelMatrix(scene._initialNavMatrix));
+		    if (scene2 != null)
+		    {
+		        scene2.setViewMatrix(NavCreateViewMatrix(scene2._initialNavMatrix));
+		        scene2.setModelMatrix(NavCreateModelMatrix(scene2._initialNavMatrix));
+		    }
+
+		    scene.draw();
+		    if (scene2 != null)
+		        scene2.draw();
+		}
+		var mpos = [0,0];
+		var mdown = false;
+		function mouseDown(ev)
+		{
+		    var mouseDownPos = [ev.clientX-canvas.offsetLeft,ev.clientY-canvas.offsetTop];
+		    if (!scene.onClick(mouseDownPos, ev.button))
+		    {
+			    mdown = true;
+			    mpos = mouseDownPos;
+			}
+		}
+		function mouseUp(ev)
+		{
+			mdown = false;
+		}
+		function mouseMove(ev)
+		{
+			if (!mdown)
+			    return;
+			var mousePos = [ ev.clientX-canvas.offsetLeft, ev.clientY-canvas.offsetTop ];
+			var mdelta = [(mpos[0]-mousePos[0]),(mpos[1]-mousePos[1])];
+			mpos = [mousePos[0],mousePos[1]];
+		    if (ev.button == 0)
+		    {
+		        if (NavRotation(mpos, mdelta))
+                    scene.clearRefine();
+		    }
+		    else if (ev.button == 1)
+		    {
+		        if (NavPan(mdelta))
+    		        scene.clearRefine();
+		    }
+		}
+		function mouseWheel(ev)
+		{
+			var delta = ev.wheelDelta?ev.wheelDelta:(-ev.detail*10.0);
+            //var deltaScene = (delta*0.05)*(scene.sceneRadius*0.01);
+            var deltaScene = delta * 0.05;
+            if (NavChangeDolly(deltaScene))
+                scene.clearRefine();
+        }
+		var storedpos_reset_flash = { xang: 0.251327, yang: 0.175929, xpan: 0, ypan: 0, dolly: 31.7347 };
+		var storedpos_top = { xang: -0.65345, yang: -2.13628, xpan: 0, ypan: 0, dolly: 0.510048 };
+		var storedpos_pannels = { xang: -0.0125647, yang: -3.11646, xpan: 0, ypan: 0, dolly: 45.0304 };
+		var storedpos_side_pose = { xang: 0.841946, yang: -0.314155, xpan: 0, ypan: 0, dolly: 45.033 };
+		var storedpos_6_reset = { xang: -0.0251333, yang: -0.201062, xpan: 0, ypan: 0, dolly: 20.1248 };
+		var storedpos_7_reset = { xang: -0.0251333, yang: -0.150796, xpan: 0, ypan: 0, dolly: 20.1268 };
+		var storedpos_8_reset = { xang: 0, yang: -0.125663, xpan: 0, ypan: 0, dolly: 20.128 };
+		var storedpos_spin = { xang: -0.666017, yang: -0.276462, xpan: 0, ypan: 0, dolly: -0.255538 };
+
+    </script>
+</head>
+<body onload="SuperblazeStart();">
+<div style='text-align: center;'>
+	<canvas id='superblaze-canvas' style='border: none;' width='800' height='500' />
+</div>
+<!--<div style='text-align: center;'>
+	<canvas id='superblaze-canvas2' style='border: none;' width='800' height='500' />
+</div>-->
+
+</body>
+</html>

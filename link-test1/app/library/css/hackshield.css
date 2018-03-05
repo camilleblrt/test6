@@ -1,0 +1,187 @@
+.row-content{
+	border-bottom: 1px solid #999999;
+}
+.row-content .text-row-content{
+	padding-top: 20px;
+	font: 12px/20px "Lucida Sans Unicode","Lucida Grande",sans-serif;
+	color: #333;
+}
+.row-content-last .text-row-content{
+	padding-top: 20px;
+	margin-bottom: 30px;
+	font: 12px/20px "Lucida Sans Unicode","Lucida Grande",sans-serif;
+	color: #333;
+}
+.text-row-content h4{
+	font-size: 20px;
+	color: #444;
+	font-weight: bold;
+}
+
+#hackshield-backpack{
+	top:0px;
+	left:0px;
+}
+
+#hackshield-backpack #row1 .text-row-content{
+	padding-top:80px;
+}
+#hackshield-backpack #row2 .text-row-content{
+	padding-top:100px;
+}
+#hackshield-backpack #row3 .text-row-content{
+	padding-top:80px;
+}
+#hackshield-wallet #row1 .text-row-content{
+	padding-top:80px;
+}
+#hackshield-wallet #row2 .text-row-content{
+	padding-top:100px;
+}
+#hackshield-wallet #row3 .text-row-content{
+	padding-top:80px;
+}
+#hackshield-messenger-bag #row1 .text-row-content{
+	padding-top:100px;
+}
+#hackshield-messenger-bag #row2 .text-row-content{
+	padding-top:100px;
+}
+#hackshield-messenger-bag #row3 .text-row-content{
+	padding-top:80px;
+}
+
+
+#hackshield-backpack #row1{
+	height: 335px;
+}
+
+#hackshield-backpack #row2{
+	height: 335px;
+	background-image:url("/images/hackshield-backpack/1024x335_backpack2.jpg"); 
+	background-repeat:no-repeat;								
+}
+
+#hackshield-backpack #row3{
+	height: 335px;		
+	background-image:url("/images/hackshield-backpack/1024x335_backpack1.jpg"); 
+	background-repeat:no-repeat;					
+}
+
+#hackshield-messenger-bag #row1{
+	height: 335px;
+}
+
+#hackshield-messenger-bag #row2{
+	height: 335px;
+	background-image:url("/images/hackshield-messenger-bag/1024x335_messenger2.jpg"); 
+	background-repeat:no-repeat;								
+}
+
+#hackshield-messenger-bag #row3{
+	height: 335px;		
+	background-image:url("/images/hackshield-messenger-bag/1024x335_messenger1.jpg"); 
+	background-repeat:no-repeat;					
+}
+
+#hackshield-wallet #row1{
+	height: 335px;
+
+}
+
+#hackshield-wallet #row2{
+	height: 335px;
+	background-image:url("/images/hackshield-wallet/1024x335_wallet2.jpg"); 
+	background-repeat:no-repeat;								
+}
+
+#hackshield-wallet #row3{
+	height: 335px;	
+	background-image:url("/images/hackshield-wallet/1024x335_wallet1.jpg"); 
+	background-repeat:no-repeat;						
+}
+.carousel-button {
+  position: absolute;
+  top:200px;
+  right: 100px;			 
+}
+
+.carousel-button h4{
+  line-height: 20px;
+  color: #ffffff;			
+}
+.carousel-button p {
+  line-height: 20px;
+  font-size:12px;
+  color: #ffffff;
+}
+
+.carousel-button h4 {
+  margin: 0 0 5px;
+}
+
+.carousel-button p {
+  margin-bottom: 0;
+}
+
+
+.carousel-caption {
+  position: absolute;
+  right: 100px;
+  top: 150px;
+  left: 500px;
+  bottom:340px;
+  padding: 15px;
+  background: #777777;
+  background: rgba(0, 0, 0, 0.55);
+  border-radius:10px;
+}
+
+.carousel-caption h4,
+.carousel-caption p {
+  line-height: 20px;
+  color: #ffffff;
+  padding-bottom:7px;
+  font-size:13px;
+}
+.carousel-caption p b{
+	font-size:14px;
+}
+
+.carousel-caption h4 {
+  margin: 0 0 5px;
+}
+
+.carousel-caption p {
+  margin-bottom: 0;
+}
+
+.carousel-button-in{
+  position: absolute;
+  top:140px;
+  right: 90px;			 
+}
+
+.carousel-button-in h4{
+  line-height: 19px;
+  padding-bottom:0px;
+  color: #ffffff;	
+  font-size:18px;		
+}
+.carousel-button-in p {
+  line-height: 20px;
+  font-size:12px;
+  color: #ffffff;
+  padding-bottom:0px;
+}
+
+
+.carousel-button-in  a{
+
+  font-size:12px;
+}
+
+.test{
+	position:absolute;
+}
+

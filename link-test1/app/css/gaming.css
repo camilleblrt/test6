@@ -1,0 +1,1029 @@
+ /* Carousel base class */
+   
+    .background-carousel-inner{
+      background-color: black;
+      padding-bottom: 35px;
+    }
+
+    /* Since positioning the image, we need to help out the caption */
+    .carousel-caption {
+      z-index: 10;
+      bottom:auto;
+      top: 0;
+      font-family: Roboto,sans-serif;
+      text-transform: uppercase;
+      text-align: left;
+      left: 10%;
+      right: 10%;
+
+    }
+
+    .switches.carousel-caption {
+      z-index: 10;
+      bottom:auto;
+      /*top: 0;*/
+      font-family: Roboto,sans-serif;
+      text-transform: uppercase;
+      text-align: left;
+      left: 10%;
+      right: 10%;
+      /*left:0px;
+      right:0px;*/
+    }
+
+    .carousel-caption h1{
+      font-weight: 700;
+      margin: 0;
+    }
+    .carousel-caption h2{
+      font-weight: 300;
+      margin-bottom: 0;
+      color: white;
+    }
+
+    .carousel .item {
+      background-color: inherit;
+    }
+    .carousel2 .item {
+      background-color: inherit;
+      margin-bottom: 10px;
+    }
+
+    .carousel-inner > .item > img {
+      position: relative;
+    }
+
+    /*Make the text smaller when resizing*/
+    @media (min-width:1200px){
+      .carousel-caption h1{
+        font-size: 40px;
+      }
+      .carousel-caption h2 {
+        font-size: 31px;
+      }
+    }
+    @media (max-width: 991px){
+
+      .carousel-caption h1{
+        font-size: 37px;
+      }
+      .carousel-caption h2 {
+        font-size: 28px;
+      }
+    }
+    @media (max-width: 767px){
+      .carousel-caption h1{
+        font-size: 29px;
+      }
+      .carousel-caption h2 {
+        font-size: 24px;
+      }
+    }
+    @media (min-width: 768px) {
+      .carousel-inner > .item > img {
+        width: 80%;
+      }
+    }
+    @media (max-width: 1500px){
+      .carousel {
+          min-height: 0vw;
+      }
+      .homepage-product .carousel{
+        min-height: 00vw;
+      }
+      .carousel-switches{
+        min-height: 25vw !important;
+      }
+    }
+    @media (min-width: 1500px) {
+      
+      .homepage-product .carousel{
+        min-height: 0px;
+      }
+      .carousel-switches{
+        min-height: 640px !important;
+      }
+      .carousel-inner > .item > img {
+        width: 1350px;
+      }
+      .carousel-caption {
+        width: 1350px;
+      }
+    }
+    .overview-boxes {
+        bottom:15px;
+        text-align: center;
+        width: 100%;
+        font-size: 25px;
+    }
+
+    #header {
+      min-width: 60px;
+    }
+
+
+    @media only screen and (max-width:545px){
+      .carousel-caption {
+        z-index: 10;
+        bottom:auto;
+        top: 0;
+        font-family: Roboto,sans-serif;
+        text-transform: uppercase;
+        text-align: left;
+        /*left: 14%;
+        right: 12%;*/
+        left:15px;
+        right:15px;
+        padding-top: 0px;
+    }
+      /*@media only screen and (max-width:450px){
+        .homepage-product h2{
+        font-size: 35px;
+        }
+        .homepage-product {
+        font-size: 14px;
+        }
+    }*/
+      .carousel {
+        margin-bottom: 0;
+      }
+    }
+
+    .carousel-indicators-second {
+      bottom: 0px;
+    }
+    .carousel-indicators.inpage-carousel{
+      bottom: -25px;
+    }
+    .carousel-indicators li {
+      background-color: #666;
+      width: 13px;
+      height: 13px;
+      margin:0 5px;
+      border:none;
+    }
+
+    .carousel-indicators li.active {
+      background-color: #92B241;
+      width: 13px;
+      height: 13px;
+      margin:0 5px;
+    }
+
+    .carousel-control .glyphicon.glyphicon-menu-left, .carousel-control .glyphicon.glyphicon-menu-right {
+      font-size: 100px;
+    }
+     .x40 #banner .flex-viewport {
+    background: url(/backgrounds/x40_bg.png) no-repeat 0% center;
+    }
+
+    #x40-carousel h1 {
+      color:#92B241;
+    }
+    /*.carousel-control .right{
+      right: 15px;
+    }*/
+
+    
+    /* Social networks */
+
+    .social-share{
+      text-align:center;
+      padding-top: 25px;
+    }
+
+    /*Video */
+
+    .container-row-body{
+      padding-top: 100px;
+      padding-bottom: 120px;
+    }
+
+    .video-comment{
+	    margin-bottom:20px;
+    }
+
+    /*Product description*/
+
+    #prod-desc{
+    
+    background: #161616; /* Old browsers */
+    background: -moz-linear-gradient(top,  #161616 0%, #0f0f0f 6%, #000000 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#161616), color-stop(6%,#0f0f0f), color-stop(100%,#000000)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #161616 0%,#0f0f0f 6%,#000000 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #161616 0%,#0f0f0f 6%,#000000 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #161616 0%,#0f0f0f 6%,#000000 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #161616 0%,#0f0f0f 6%,#000000 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#161616', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+    background-image: url('../../shared/backgrounds/trans-bg.png');
+    background-color: #000;
+  }
+
+  /*To avoid the everything is "winning is everything" to be too big and not fit the size of the screen anymore*/
+  @media only screen and (max-width:500px){
+    #prod-desc h1{
+      font-size: 40px !important;
+    }
+  }
+
+  #prod-desc h1{
+    font-size: 48px;
+    color: #92B241;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  #prod-desc h2{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color:#fff;
+
+  }
+
+  #prod-desc h2.upperbold{
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 35px;
+  }
+
+  /*This is to use the upperbold class outside of prod-desc too*/
+  h2.upperbold{
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  #prod-desc h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color:#fff;
+  }
+
+  #prod-desc p{
+    font-size: 14px;
+    color: #888888;
+    /*margin-bottom: 35px;*/
+  }
+  .prod-desc-container h2{
+  margin-top:0px;
+  }
+  .prod-desc-container p{
+  margin-bottom:40px;
+  }
+  .prod-desc-container .last{
+  margin-bottom:0px;
+  }
+
+  .prod-desc-container{
+    margin-bottom:75px;
+    border-bottom: 1px solid #2f2f2f;
+    /*padding-bottom: 30px;*/
+  }
+
+
+  #prod-desc .image-padding-top{
+    padding-top: 10px;
+  }
+
+  /* Game icons */
+
+  .game-icons{
+	  height:60px;
+    margin-bottom:15px;
+  }
+
+  /* Switches */
+  .switch_row {
+    padding: 0;
+  }
+
+  .switch_row .col-md-12,
+  .switch_row .col-md-10,
+  .switch_row .col-md-7,
+  .switch_row .col-sm-10,
+  .switch_row .col-md-8,
+  .switch_row .col-md-5,
+  .switch_row .col-md-4,
+  .switch_row .col-md-6 {
+    padding: 3% 15px;
+  }
+
+  .switch_row .col-md-4 h4,.switch_row .col-md-6 h4 {
+    font-weight: 100;
+  }
+
+  #switch_top {
+    background: url(../../shared/backgrounds/glow.png) no-repeat right top;
+    background-size: 64% 100%;
+  }
+  #switch_top_reverse {
+    background: url(../../shared/backgrounds/glow-reverse.png) no-repeat left top;
+    background-size: 64% 100%;
+  }
+
+
+  #prod-desc .switch_row ul {
+    padding: 26px 0 0;
+  }
+
+  #prod-desc .switch_row ul li {
+    list-style: initial;
+    list-style-position: outside;
+    margin-left: 20px;
+  }
+
+  #prod-desc .switch_row ul li:before {
+    content: '';
+    margin: 0;
+  }
+
+
+  #switch_bottom {
+    position: relative;
+  }
+
+  #switch_bottom p{
+    color: #888;
+  }
+
+  #switch_bottom .switch_bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: url("/x/x40-mechanical-keyboard/images/keyboard-background.jpg") no-repeat center center;
+    background-size: cover;
+  }
+  
+  @media (min-width:1200px){
+.description-switches-x40-1{
+	min-height:235px;
+	margin-bottom: 35px;
+	color: #888888;
+}
+.description-switches-x40-2{
+	margin-bottom: 15px;
+	color: #888888;
+}
+}
+
+@media (min-width:767px) and (max-width:992px){
+ .description-switches-x40-1{
+		margin-bottom: 15px;
+		color: #888888;
+	}
+	.description-switches-x40-2{
+ 		margin-bottom: 15px;
+ 		color: #888888;
+ 	}
+	.switches-x40 img{
+		height:150px;
+	}
+}
+
+@media (min-width:992px) and (max-width:1200px){
+ .description-switches-x40-1{
+		margin-bottom: 15px;
+		color: #888888;
+	}
+	.description-switches-x40-2{
+ 		margin-bottom: 15px;
+ 		color: #888888;
+ 	}
+	.switches-x40 img{
+		height:100px;
+	}
+}
+
+@media only screen and (max-width:767px){
+	.description-switches-x40-1{
+		 margin-bottom: 15px;
+		 color: #888888;
+	 }
+	 .description-switches-x40-2{
+		 margin-bottom: 15px;
+		 color: #888888;
+	 }
+	 .switches-x40 img{
+		 height:100px;
+	 }
+	 .visible-xs {
+    display: inline-block !important;
+}
+}
+
+/* Sounds */
+.inline-block-wrapper {
+    display: inline-block;
+}
+
+.bar-wrapper {
+    /*background-color: red;*/
+    height: 30px;
+    width: 10px;
+    display: block;
+    position: relative;
+}
+.bar {
+    width: 80%;
+    height: 10px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}
+.bar1 {
+    width: 80%;
+    height: 10px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}
+
+
+.bar-container{
+	display:inline;
+	margin-left: -35%;
+}
+#musicSign{
+	left:26%;
+	top:50%;
+	font-size: 25px;
+	margin: 0 auto;
+  margin-left: 0px;
+  position:relative;
+  z-index:10000;
+	color: white;
+}
+.btn-sound{
+	background-color: #4E4646;
+	border-color: #4E4646;
+	width: 110px;
+	padding:3px 12px;
+}
+.btn-sound:hover{
+	background-color: #4E4646;
+	border-color: #4E4646;
+}
+.btn-sound:focus{
+	background-color: #4E4646;
+	border-color: #4E4646;
+}
+
+.btn-switch{
+	background-color: transparent;
+	border: 2px solid #4E4646;
+	width: 110px;
+	padding:3px 12px;
+}
+.btn-switch:hover{
+	background-color: #4E4646;
+	border-color: #4E4646;
+}
+.btn-switch:focus{
+	background-color: #4E4646;
+	border-color: #4E4646;
+}
+
+
+.linear-button{
+background-color: #FFC72A;
+}
+.tactile-button{
+	background-color: #858E59;
+
+}
+#musicSign1{
+	left:26%;
+	top:50%;
+	font-size: 25px;
+	margin: 0 auto;
+  margin-left: 0px;
+  position:relative;
+  z-index:10000;
+	color: white;
+}
+
+
+@media (min-width:1200px){
+.description-switches-x40-1{
+	min-height:235px;
+	margin-bottom: 35px;
+	color: #888888;
+}
+.description-switches-x40-2{
+	margin-bottom: 15px;
+	color: #888888;
+}
+}
+
+@media (min-width:767px) and (max-width:992px){
+ .description-switches-x40-1{
+		margin-bottom: 15px;
+		color: #888888;
+	}
+	.description-switches-x40-2{
+ 		margin-bottom: 15px;
+ 		color: #888888;
+ 	}
+	.switches-x40 img{
+		height:150px;
+	}
+}
+
+@media (min-width:992px) and (max-width:1200px){
+ .description-switches-x40-1{
+		margin-bottom: 15px;
+		color: #888888;
+	}
+	.description-switches-x40-2{
+ 		margin-bottom: 15px;
+ 		color: #888888;
+ 	}
+	.switches-x40 img{
+		height:100px;
+	}
+}
+
+@media only screen and (max-width:767px){
+	.description-switches-x40-1{
+		 margin-bottom: 15px;
+		 color: #888888;
+	 }
+	 .description-switches-x40-2{
+		 margin-bottom: 15px;
+		 color: #888888;
+	 }
+	 .switches-x40 img{
+		 height:100px;
+	 }
+	 .visible-xs {
+    display: inline-block !important;
+}
+}
+
+.carousel-caption .btn {
+    text-shadow: none;
+    /*margin-top: 25px !important;*/
+}
+
+/*Technical specifications*/
+
+#tech-spec ul{
+	list-style: none;
+	padding: 26px;
+	margin: 0;
+}
+#tech-spec ul li{
+	margin-bottom: 10px;
+}
+
+#tech-spec ul li:before {
+	content: '»';
+	margin-right: -10px;
+	color: #92B241;
+	font-size: 18px;
+	font-weight: bold;
+	left: -25px;
+	position: relative;
+}
+
+.ts-grey-background{
+	background-color: #212121;
+}
+
+.ts-red-background{
+	background-color: #2b0709;
+}
+
+/*This is for the column to have the same height.
+Go check:
+http://www.minimit.com/articles/solutions-tutorials/bootstrap-3-responsive-columns-of-same-height
+if any questions.*/
+@media (min-width: 992px) {
+	.row-md-height {
+		display: table;
+		table-layout: fixed;
+		height: 100%;
+		width: 100%;
+	}
+	.col-md-height {
+		display: table-cell;
+		float: none;
+		height: 100%;
+	}
+}
+
+.row-md-height{
+	padding-top:20px;
+}
+
+
+/*More products*/
+#productBottomPage{
+	margin-top:0px;
+	margin-bottom: 0px;
+}
+
+#productBottomPage h2{
+	padding-top:0px;
+}
+
+.product-item-link{
+	font-weight: 500 !important;
+}
+
+#productBottomPage img:hover{
+	-webkit-filter: brightness(115%);
+	filter: brightness(115%);
+	background-image: url('../shared/backgrounds/pg-red-shadow.png');
+	background-repeat: no-repeat;
+	background-position: bottom;
+}
+
+.product-item-link{
+	font-weight: 500 !important;
+}
+
+.accessory-item{
+	margin: 10px 0px 20px 0px;
+}
+.accessory-item a, .accessory-item a:hover, .accessory-item a:active, .accessory-item a:focus {
+	color: #92B241;
+	font-weight: bold;
+}
+
+@media (min-width:767px) and (max-width:1090px){
+	.accessory-item{
+		min-height : 200px;
+	}
+}
+
+/*Buy button*/
+
+.gaming-buy-button{
+  float: right;
+	width: 15%;
+	background: #92B241;
+	border: 1px solid #92B241;
+	border-radius: 2px;
+	color: #ffffff;
+	text-transform: capitalize;
+	text-align: center;
+	line-height: 36px;
+  font-weight: bold;
+	padding: 9px 0px;
+  min-width:80px
+}
+
+.gaming-buy-button:hover,
+.gaming-buy-button:focus,
+.gaming-buy-button:active{
+  background-color: #ffffff;
+  color: #92B241;
+}
+
+.buy-button{
+      color: #ffffff;
+      background-color: #92B241;
+      border-color: #92B241;
+      border-radius: 1px;
+      line-height: 1.42857143;
+      /*margin-top:2px;*/
+      font-size: 22px;
+      margin-left: 5px;
+      margin-bottom: 70px;
+}
+
+
+.buy-button:hover,
+.buy-button:focus,
+.buy-button:active,
+.buy-button.active,
+.open .dropdown-toggle.buy-button {
+	color: #ffffff;
+	background-color: #92B241;
+	border-color: #92B241;
+}
+
+.buy-button:active,
+.buy-button.active,
+.open .dropdown-toggle.buy-button {
+	background-image: none;
+}
+
+.buy-button.disabled,
+.buy-button[disabled],
+fieldset[disabled] .buy-button,
+.buy-button.disabled:hover,
+.buy-button[disabled]:hover,
+fieldset[disabled] .buy-button:hover,
+.buy-button.disabled:focus,
+.buy-button[disabled]:focus,
+fieldset[disabled] .buy-button:focus,
+.buy-button.disabled:active,
+.buy-button[disabled]:active,
+fieldset[disabled] .buy-button:active,
+.buy-button.disabled.active,
+.buy-button[disabled].active,
+fieldset[disabled] .buy-button.active {
+	background-color: #92B241;
+	border-color: #92B241;
+}
+
+.buy-button .badge {
+	color: #92B241;
+	background-color: #ffffff;
+}
+
+@media only screen and (max-width:545px){
+
+	.buy-button:active,
+	.buy-button.active,
+	.open .dropdown-toggle.buy-button {
+		background-image: none;
+	}
+
+	.buy-button.disabled,
+	.buy-button[disabled],
+	fieldset[disabled] .buy-button,
+	.buy-button.disabled:hover,
+	.buy-button[disabled]:hover,
+	fieldset[disabled] .buy-button:hover,
+	.buy-button.disabled:focus,
+	.buy-button[disabled]:focus,
+	fieldset[disabled] .buy-button:focus,
+	.buy-button.disabled:active,
+	.buy-button[disabled]:active,
+	fieldset[disabled] .buy-button:active,
+	.buy-button.disabled.active,
+	.buy-button[disabled].active,
+	fieldset[disabled] .buy-button.active {
+		background-color: #92B241;
+		border-color: #92B241;
+	}
+	.buy-button{
+		font-size: 11px;
+	}
+	.buy-button .badge {
+		color: #92B241;
+		background-color: #ffffff;
+	}
+}
+
+
+ @media screen and (min-width: 945px) {
+      #spinning-mouse-container {
+        background-color: #000;
+        padding: 30px 0px;
+      }
+      #spinning-mouse {
+        width: 940px;
+        height: 528px;
+        display: block;
+        margin: auto;
+        border: none;
+      }
+    }
+    
+    @media screen and (max-width: 945px) {
+      #spinning-mouse {
+        display: none;
+      }
+    }
+    
+    .prod-desc-bullet-point {
+      padding-top: 50px;
+    }
+    
+    .prod-desc-bullet-point ol {
+      list-style-type: none;
+      color: #888888;
+      margin-left: 0;
+      padding-right: 15;
+    }
+    
+    .prod-desc-bullet-point ol li {
+      counter-increment: step-counter;
+      padding: 1px 5px;
+    }
+    
+    .prod-desc-bullet-point ol li::before {
+      content: counter(step-counter);
+      background-color: #B0AEAE;
+      color: #000;
+      font-size: 12px;
+      font-weight: 400;
+      border-radius: 50%;
+      width: 18px;
+      height: 18px;
+      display: inline-block;
+      text-align: center;
+      position: relative;
+      margin: 5px;
+      padding-top: 1px;
+      margin-top: 5px !important;
+    }
+    
+    .m50 #banner .flex-viewport {
+      background: url(/backgrounds/M50_bg.png) no-repeat 15% center;
+    }
+
+    /*Product gallery*/
+
+    #product-gallery{
+	background: #2f2f2f; /* Old browsers */
+	background: -moz-linear-gradient(top,  #2f2f2f 0%, #2c2c2c 18%, #2c2c2c 44%, #0e0e0e 74%, #060606 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2f2f2f), color-stop(18%,#2c2c2c), color-stop(44%,#2c2c2c), color-stop(74%,#0e0e0e), color-stop(100%,#060606)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #2f2f2f 0%,#2c2c2c 18%,#2c2c2c 44%,#0e0e0e 74%,#060606 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #2f2f2f 0%,#2c2c2c 18%,#2c2c2c 44%,#0e0e0e 74%,#060606 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #2f2f2f 0%,#2c2c2c 18%,#2c2c2c 44%,#0e0e0e 74%,#060606 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #2f2f2f 0%,#2c2c2c 18%,#2c2c2c 44%,#0e0e0e 74%,#060606 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2f2f2f', endColorstr='#060606',GradientType=0 ); /* IE6-9 */
+
+	border-top: 0.1em solid #0a0a0a;
+	margin-top: -2px;
+    }
+
+    #product-gallery h2{
+        /*margin-top: 45px;*/
+        margin-top:0px;
+    }
+
+    #product-gallery-slider li{
+        text-align: center;
+    }
+
+    #product-gallery-slider .flex-control-thumbs img{
+        cursor: pointer;
+        display: inline-block;
+        width: 168px;
+        opacity: 1;
+    }
+
+    #product-gallery-slider .flex-control-thumbs .flex-active,
+    #product-gallery-slider .flex-control-thumbs img:hover{
+        opacity: 1 !important;
+        background-image: url('../shared/backgrounds/pg-red-shadow.png');
+        background-repeat: no-repeat;
+        background-position: bottom;
+    }
+
+    #product-gallery-slider .flex-control-thumbs{
+        /*margin-top: 20px;*/
+        margin-bottom: 50px;
+        /*position: relative;*/
+        display: block;
+    }
+
+    #product-gallery-slider .flex-control-thumbs li{
+        margin: 0 30px;
+        width: auto;
+        float: none;
+    }
+
+    #product-gallery-slider .flex-direction-nav a.flex-next,
+    #product-gallery-slider .flex-direction-nav a.flex-prev {
+        display: none !important;
+    }
+
+    #product-gallery .wrap {
+        max-width: 940px;
+        margin: 0 auto;
+    }
+
+    .slides{
+        list-style-type: none;
+    }
+
+    /*Mouse pads*/
+
+    p.control_lower {
+		font-style: italic;
+		font-size: 22px;
+		color: #fff;
+		width: 100%;
+    margin: 35px 0px;
+	}
+
+
+	.control_img,
+	.flex_img img {
+		display: block;
+		margin: 0 auto;
+		margin-top:10%;
+		left: 10%;
+		right:10%;
+	}
+
+	#prod-desc{
+		padding-bottom: 0px;
+	}
+
+	@media only screen and (max-width:767px){
+		.switch_row {
+			margin-right: 3%;
+			margin-left: 3%;
+		}
+	}
+
+  #top-mousepads{
+    background-color:black;
+    padding-top:35px;
+    padding-bottom:70px;
+  }
+  /*Accessories*/
+
+  .accessory-item-link{
+	margin-top: -10px !important;
+	text-decoration: none;
+}
+
+.accessory-item :hover{
+	filter: brightness(130%);
+	text-decoration: none;
+}
+
+  .accessories-background{
+    background-color:black;
+  }
+
+  .accessories-container{
+    padding-bottom:70px;
+  }
+
+  /*Top panels*/
+
+    .accessory-item-link {
+      margin-top: -10px !important;
+    }
+
+    .top-panels-gallery .col-md-6 , .col-sm-5, .col-xs-6{
+      padding:20;
+      margin:0;
+    }
+
+
+    .top-panel{
+      padding-top:5px;
+      padding-bottom:5px;
+    }
+
+
+  /*Bungee*/
+
+    .bungee #banner .flex-viewport {
+      background: url(/backgrounds/bungee_bg.png) no-repeat 50% center;
+    }
+
+
+
+  /*Other */
+
+    .gaming-text{
+      color:#DDD;
+    }
+
+    segment-title{
+      color: #92B241;
+    }
+
+    h3{
+      font-weight: bold;
+    }
+
+    .space-from-header{
+        padding-top: 70px;
+        background-color:black;
+    }
+    
+  /*END*/
+
+  .gaming ol.carousel-indicators li {
+      background: dimgrey;
+      border-radius: 100%;
+      width: 10px;
+      height: 10px;
+      margin: 0px 3px;
+      padding: 0px;
+  }
+
+  .gaming ol.carousel-indicators li.active {
+      background: #92B241;
+      width: 10px;
+      height: 10px;
+      margin: 0px 3px;
+      padding: 0px;
+  }
+
+  .gaming-green{
+    color: #92B241 !important;
+  }
+
+ 
+

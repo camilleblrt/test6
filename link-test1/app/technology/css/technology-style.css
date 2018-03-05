@@ -1,0 +1,170 @@
+h1{
+    font-size: 44px;
+    font-family: "medium", Helvetica, sans-serif;
+    font-weight: bold;
+    margin-bottom: .8%;
+    text-transform: uppercase;
+    color:#fff;
+}
+
+h2{
+    font-family: "medium", Helvetica, sans-serif;
+    margin: 5px 0;
+    color: #fff;
+    text-transform: capitalize;
+    font-size:34px;
+}
+
+h4{
+    margin-bottom: 15px;
+    color: #5cb85c;
+}
+
+.gamma-zulu-page p{   
+    margin-bottom:20px;
+}
+
+.gamma-zulu-page h2{   
+    margin-bottom:20px;
+}
+
+p, a, figcaption{
+    color:#aba8a8;
+}
+
+a:hover{
+    color:#000;
+}
+
+.feature{
+    padding-top:100px;
+    padding-bottom:100px;
+    border-bottom: 1px solid #222222;
+}
+
+.feature-last{
+    padding-top:100px;
+    padding-bottom:100px;
+    border-bottom: 0px;
+}
+
+@media screen and (max-width:767px){
+    .feature{
+        padding-top:40px;
+        padding-bottom:40px;
+    }
+}
+
+.feature figcaption{
+    margin:0px auto;
+}
+
+.title-position {
+    position: absolute;
+    top: 35%;
+    left: 37%;
+    transform: translate(-50%, -50%);
+}
+
+.text-position {
+    position: absolute;
+    top: 40%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width:991px){
+    .title-position {
+        position: absolute;
+        top: 25%;
+        left: 38%;
+        transform: translate(-50%, -50%);
+    }
+
+    .text-position {
+        position: absolute;
+        top: 30%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media screen and (max-width:767px){
+    .title-position {
+        position: relative;
+        top: 0%;
+        left: 0%;
+        transform: translate(0%, 0%);
+    }
+
+    .text-position {
+        position: relative;
+        top: 0%;
+        left: 0%;
+        transform: translate(0%, 0%);
+    }
+}
+
+img {
+    max-width: 100%;
+    padding-left: 0;
+}
+
+
+.button-switch, .button-switch:focus {
+    background-color: #000;
+    border-color: #5cb85c;
+    text-transform: uppercase;
+    margin-left: 20px;
+    margin-top: 15px;
+    border-radius:0px;
+}
+
+.button-switch:hover {
+    background-color: #5cb85c;
+}
+
+.gamma-zulu-column {
+    text-align: right;
+}
+.dk-5q-color {
+    color: #5cb85c;
+}
+
+.table tr{
+    color:#CBCBCB;
+}
+
+.btn{
+    color: #CBCBCB;
+}
+
+.row{
+    margin-right:0px;
+    margin-left:0px;
+}
+
+.q-software-page p{
+    margin:auto;
+    margin-top:10px;
+    max-width:600px;
+}
+
+.q-software-page h2, h1{
+    margin-bottom:20px;
+}
+
+.q-software-page img{
+    margin-top:56px;
+}
+
+@media only screen and (max-width: 767px){
+    .q-software-page img{
+        margin-top: 38px;
+    }
+}
+
+#collapseShowCode a:hover, #collapseShowCode a:focus, #collapseShowCode .nav-pills>li.active>a {
+    color: #fff;
+    background-color: #5cb85c;
+}

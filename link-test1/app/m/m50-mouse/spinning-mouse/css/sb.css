@@ -1,0 +1,274 @@
+
+	#dialog_link {padding: .4em 1em .4em 20px;text-decoration: none;position: relative;}
+	#dialog_link span.ui-icon {margin: 0 5px 0 0;position: absolute;left: .2em;top: 50%;margin-top: -8px;}
+	ul#icons {margin: 0; padding: 0;}
+	ul#icons li {margin: 2px; position: relative; padding: 4px 0; cursor: pointer; float: left;  list-style: none;}
+	ul#icons span.ui-icon {float: left; margin: 0 4px;}
+
+.ui-slider { border: 1px solid #aaaaaa; background: #ffffff;}
+.ui-slider .ui-widget-header{
+	background: #0083CA; 	
+}
+.ui-corner-all {
+	visibility:hidden;
+}
+
+.nodrag {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+div, img {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.ui-slider .ui-slider-handle {
+		width:22px; 
+		height:22px; 
+		background:url(../images_gl/zoom_handle_up.png) no-repeat; overflow: hidden; 
+		position:absolute;
+		left:3px;
+		border-style:none;   
+		outline: none;
+}
+				
+		  div.transbox {
+			position:absolute;
+			top: 442px;
+			left: 130px;
+			width: 660px;
+			height:82px;
+			margin:0px;
+		  }
+		  div.bar {
+			position:absolute;
+			top:-5px;
+			left:0px;
+			background-color:#CCCCCC;
+			width:1px;
+			height:5px;
+			overflow:hidden;
+		  }
+		   div.loadtext {
+			position:absolute;
+			top:0px;
+			left:0px;
+			color:#CCCCCC;
+			font-family: Arial;
+			font-size: 14px;
+		  }
+		  img.thumbnail {
+			float:left;
+			width:130px;
+			margin:0px;
+			padding:0px;
+			border:1px solid #CCCCCC;
+			padding: 8px 0px 0px 0px;
+			display: inline;
+			background-color:#000;
+		  }
+		  
+		  div.thumbHolder {
+			position: absolute;
+			top : 442px;
+			left : 140px;
+			width:660px;
+			visibility: hidden;
+			padding: 0px;
+			margin: 0px;
+			display: inline;
+			line-height:0;
+		  }
+		  .rotateLeft {
+			position:absolute;
+			top:200px;
+			left:-1px;
+		  }
+		  .rotateRight {
+			position:absolute;
+			top:200px;
+			left:840px;
+		  }
+		  a {
+			outline:none;
+		  }
+		  #sliderframe {
+			position:absolute;
+			left:0px;
+			top:0px;
+		  }
+		  .shotSelector {
+			background : #CCCCCC;
+			position: absolute;
+			width : 132px;
+			overflow:hidden; 
+			height : 5px;
+			top: -5px;
+			left: 0px;
+		  }
+	   	.clear { clear: both; }
+		
+.onOffButtonHover {
+	width:30px;
+	height:35px;
+}
+#offActivate
+{
+	width:30px;
+	height:35px;
+	background:url("../images_gl/offActivate.png") no-repeat; overflow:hidden; 
+}
+#offDeactivate
+{
+	width:30px;
+	height:35px;
+	background:url("../images_gl/offDeactivate.png") no-repeat; overflow:hidden; 
+}
+#onActivate
+{
+	width:30px;
+	height:35px;
+	background:url("../images_gl/onActivate.png") no-repeat; overflow:hidden; 
+}
+#onDeactivate
+{
+	width:30px;
+	height:35px;
+	background:url("../images_gl/onDeactivate.png") no-repeat; overflow:hidden; 
+}
+#heartBeatsActivate
+{
+	width:30px;
+	height:35px;
+	background:url("../images_gl/heartBeatsActivate.png") no-repeat; overflow:hidden; 
+}
+#heartBeatsDeactivate
+{
+	width:30px;
+	height:35px;
+	background:url("../images_gl/heartBeatsDeactivate.png") no-repeat; overflow:hidden; 
+}
+
+
+#offDeactivateMO
+{
+	width:70px;
+	height:84px;
+	background:url("../images_gl/mobile/offDeactivate.png") no-repeat; overflow:hidden; 
+}
+#onActivateMO
+{
+	width:70px;
+	height:84px;
+	background:url("../images_gl/mobile/onActivate.png") no-repeat; overflow:hidden; 
+}
+#onDeactivateMO
+{
+	width:70px;
+	height:84px;
+	background:url("../images_gl/mobile/onDeactivate.png") no-repeat; overflow:hidden; 
+}
+#heartBeatsActivateMO
+{
+	width:70px;
+	height:84px;
+	background:url("../images_gl/mobile/heartBeatsActivate.png") no-repeat; overflow:hidden; 
+}
+#heartBeatsDeactivateMO
+{
+	width:70px;
+	height:84px;
+	background:url("../images_gl/mobile/heartBeatsDeactivate.png") no-repeat; overflow:hidden; 
+}
+
+.myBun{
+	left: 10px;
+	position: absolute;
+	top: 602px;
+}
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+div, img {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none; 
+}
+
+div{
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+ul, li{
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+.one{
+	position: absolute;
+	top: 25px;
+	left: 930px;
+	list-style-type: none;
+}
+
+#resetButtonMO {
+	width:45px;
+	height:45px;
+	background:url("../images_gl/mobile/reset.png")no-repeat; overflow: hidden; 
+}
+#resetButton {
+	width:38px;
+	height:38px;
+	background:url("../images_gl/reset.png")no-repeat; overflow: hidden; 
+}
+.buttonHover {
+	width:27px;
+	height:24px;
+}
+.divSize {
+	width:215px;
+	height:178px;
+}
+.ui-slider-handle-hover {
+	width:26px; 
+	height:26px; 
+	background:url("../images_gl/zoom_handle_down.png")no-repeat; overflow: hidden; 
+		}
+		#altContent {
+			margin: 0;
+			padding: 0;
+			width:900px;
+			height:506px;
+			margin:0px 0px;
+			text-align: center;
+			overflow:hidden;
+		}
+		#flashHolder {
+			margin: 0;
+			padding: 0;
+			width:900px;
+			height:506px;
+			position:absolute;
+			top:0px;
+			left:0px;
+			overflow:hidden;
+		}
+		#mobileLink {
+			width:200px;
+			margin: 20px auto;
+		}

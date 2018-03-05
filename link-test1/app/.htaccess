@@ -1,0 +1,593 @@
+# ----------------------------------------------------------------------
+# Prevent viewing of .htaccess, .htpassword files
+# ----------------------------------------------------------------------
+
+
+<FilesMatch "^\.([Hh][Tt]|[Dd][Ss]_[Ss]|txt)">
+        Order allow,deny
+        Deny from all
+  Satisfy All
+</FilesMatch>
+
+<files CHANGELOG>
+order allow,deny
+deny from all
+</files>
+
+# ----------------------------------------------------------------------
+# Start rewrite engine
+# ----------------------------------------------------------------------
+
+# Turning on the rewrite engine is necessary for the following rules and
+# features. FollowSymLinks must be enabled for this to work.
+
+# Some cloud hosting services require RewriteBase to be set: goo.gl/HOcPN
+# If using the h5bp in a subdirectory, use `RewriteBase /foo` instead where
+# 'foo' is your directory.
+
+# If your web host doesn't allow the FollowSymlinks option, you may need to
+# comment it out and use `Options +SymLinksIfOwnerMatch`, but be aware of the
+# performance impact: http://goo.gl/Mluzd
+
+<IfModule mod_rewrite.c>
+  Options +FollowSymlinks
+# Options +SymLinksIfOwnerMatch
+  RewriteEngine On
+  RewriteBase /
+</IfModule>
+
+
+
+# ----------------------------------------------------------------------
+# Redirect daskeyboard.com to www.daskeyboard.com
+# ----------------------------------------------------------------------
+
+<IfModule mod_rewrite.c>
+   RewriteCond %{HTTP_HOST} ^daskeyboard.+$ [NC]
+   RewriteRule ^ http://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+</IfModule>
+
+# ----------------------------------------------------------------------
+# Redirect gaming.daskeyboard.com to www.daskeyboard.com
+# ----------------------------------------------------------------------
+<IfModule mod_rewrite.c>
+    RewriteCond %{HTTP_HOST} ^gaming.daskeyboard.+$ [NC]
+    RewriteRule ^(.*)$ http://www.daskeyboard.com$1 [R=301,L]
+</IfModule>
+# ----------------------------------------------------------------------
+# Redirect gaming.daskeyboard.com to staging.daskeyboard.com
+# ----------------------------------------------------------------------
+<IfModule mod_rewrite.c>
+    RewriteCond %{HTTP_HOST} ^gaming.daskeyboard.com$ [NC]
+    RewriteRule ^(.*)$ http://staging.daskeyboard.com%{REQUEST_URI} [R=301,NC,L,QSA]
+</IfModule>
+
+# ----------------------------------------------------------------------
+# Add comment before adding a redirect and sort it.
+# ----------------------------------------------------------------------
+
+#redirection for youtuber mstech
+redirect 301 /mstech /?utm_source=youtube&utm_campaign=affiliate&utm_medium=influencer-mstech&utm_content=15
+redirect 301 /keychatter /?utm_source=blog&utm_campaign=affiliate&utm_medium=influencer-keychatter&utm_content=15
+redirect 301 /CritTV /?utm_source=youtube&utm_campaign=affiliate&utm_medium=influencer-CritTV&utm_content=15
+#------------------------------------------------
+redirect 301 /nkro https://daskeyboard.mojohelpdesk.com/help/article/121833
+redirect 301 https://www.daskeyboard.com/      http://www.daskeyboard.com/
+redirect 301 %20Official%20Das%20Keyboard%20homepage http://www.daskeyboard.com/
+redirect 301 /%3Cbr     http://www.daskeyboard.com/
+redirect 301 /about.php http://www.daskeyboard.com/company-information/our-story/
+redirect 301 /about-us/ http://www.daskeyboard.com/company-information/our-story/
+redirect 301 /back-to-school-promotion  http://www.daskeyboard.com/
+redirect 301 /become-a-reseller/ http://www.daskeyboard.com/company-information/become-a-reseller/
+# redirect 301 /become-reseller/?ModPagespeed=noscript  http://www.daskeyboard.com/company-information/become-a-reseller/
+redirect 301 /big.html http://www.daskeyboard.com/model-s-professional/
+redirect 301 /bio/      http://www.daskeyboard.com/company-information/our-story/
+# redirect 301 /bio/?ModPagespeed=off   http://www.daskeyboard.com/blog/
+# redirect 301 /blog/%3Fpage_id%3D1329  http://www.daskeyboard.com/blog/
+# redirect 301 /blog/author/tyler/page/2/       http://www.daskeyboard.com/blog/
+# redirect 301 /blog/comment-page-1/    http://www.daskeyboard.com/blog/
+# redirect 301 /blog/customer-experience-compromised-model-s-being-recalled/    http://www.daskeyboard.com/blog
+ redirect 301 /blog/?p=1100&cpage=1    http://www.daskeyboard.com/blog/?p=1100
+ redirect 301 /blog/?p=111&cpage=1&ModPagespeed=off    http://www.daskeyboard.com/blog/?p=111
+ redirect 301 /blog/?p=1149&cpage=1    http://www.daskeyboard.com/blog/?p=1149
+ redirect 301 /blog/?p=1170&cpage=1    http://www.daskeyboard.com/blog/?p=1170
+ redirect 301 /blog/?p=1224&cpage=1    http://www.daskeyboard.com/blog/
+ redirect 301 /blog/?p=1278&cpage=1    http://www.daskeyboard.com/blog/?p=1278
+ redirect 301 /blog/?p=15&cpage=1&ModPagespeed=off     http://www.daskeyboard.com/blog/?p=15
+ redirect 301 /blog/?p=1616&cpage=1    http://www.daskeyboard.com/blog/?p=1616
+ redirect 301 /blog/?p=1772&cpage=1    http://www.daskeyboard.com/blog/?p=1772
+ redirect 301 /blog/?p=1833&cpage=1    http://www.daskeyboard.com/blog/?p=1833
+ redirect 301 /blog/?p=2372&cpage=1    http://www.daskeyboard.com/blog/?p=2372
+ redirect 301 /blog/?p=2588&cpage=1    http://www.daskeyboard.com/blog/?p=2588
+ redirect 301 /blog/?p=3000&cpage=1    http://www.daskeyboard.com/blog/?p=3000
+ redirect 301 /blog/?p=301&cpage=1     http://www.daskeyboard.com/blog/?p=301
+ redirect 301 /blog/?p=3212&cpage=1    http://www.daskeyboard.com/blog/?p=3212
+ redirect 301 /blog/?p=3235&cpage=1    http://www.daskeyboard.com/blog/?p=3235
+ redirect 301 /blog?p=3235     http://www.daskeyboard.com/blog/?p=3235
+ redirect 301 /blog/?p=33&cpage=1      http://www.daskeyboard.com/blog/?p=33
+ redirect 301 /blog/?p=362&cpage=1       http://www.daskeyboard.com/blog/?p=362
+ redirect 301 /blog/?p=37&cpage=1      http://www.daskeyboard.com/blog/?p=37
+ redirect 301 /blog/?p=380&cpage=1     http://www.daskeyboard.com/blog/?p=380
+ redirect 301 /blog/?p=3820    http://www.daskeyboard.com/blog/?p=3820
+ redirect 301 /blog/?p=3886&cpage=1    http://www.daskeyboard.com/blog/?p=3886
+ redirect 301 /blog/?p=38&cpage=1      http://www.daskeyboard.com/blog/?p=38
+ redirect 301 /blog/?p=4005&cpage=1    http://www.daskeyboard.com/blog/?p=4005
+ redirect 301 /blog/?p=40&cpage=1   http://www.daskeyboard.com/blog/?p=40
+ redirect 301 /blog/?p=40      http://www.daskeyboard.com/blog/?p=40
+ redirect 301 /blog/?p=417&cpage=1       http://www.daskeyboard.com/blog/?p=417
+ redirect 301 /blog/?p=41&cpage=1      http://www.daskeyboard.com/blog/?p=41
+ redirect 301 /blog/?p=4269&cpage=1    http://www.daskeyboard.com/blog/?p=4269
+ redirect 301 /blog/?p=42&cpage=1      http://www.daskeyboard.com/blog/?p=42
+ redirect 301 /blog/?p=4358    http://www.daskeyboard.com/blog/?p=4358
+ redirect 301 /blog/?p=448&cpage=1     http://www.daskeyboard.com/blog/?p=448
+ redirect 301 /blog/?p=44&cpage=1      http://www.daskeyboard.com/blog/?p=44
+ redirect 301 /blog/?p=473&cpage=1    http://www.daskeyboard.com/blog/?p=473
+ redirect 301 /blog/?p=481&cpage=1       http://www.daskeyboard.com/blog/?p=481
+ redirect 301 /blog?p=494      http://www.daskeyboard.com/blog/?p=494
+ redirect 301 /blog/?p=51&cpage=1      http://www.daskeyboard.com/blog/?p=51
+ redirect 301 /blog/?p=7&cpage=1       http://www.daskeyboard.com/blog/?p=7
+ redirect 301 /blog/?p=82&cpage=1      http://www.daskeyboard.com/blog/?p=82
+ redirect 301 /blog/?p=896&cpage=1     http://www.daskeyboard.com/blog/?p=896
+ redirect 301 /blog/?p=907&cpage=1     http://www.daskeyboard.com/blog/?p=907
+ redirect 301 /blog/?p=955&cpage=1     http://www.daskeyboard.com/blog/?p=955
+ redirect 301 /blog/?page_id=1329&cpage=1      http://www.daskeyboard.com/blog/?p=1329
+ redirect 301 /blog/?page_id=1458&cpage=1      http://www.daskeyboard.com/blog/?p=1458
+ redirect 301 /blog/?page_id=14        http://www.daskeyboard.com/blog/?p=14
+ redirect 301 /blog/wp-trackback.php?p=1052    http://www.daskeyboard.com/blog/?p=1052
+ redirect 301 /blog/wp-trackback.php?p=1100    http://www.daskeyboard.com/blog/?p=1100
+ redirect 301 /blog/wp-trackback.php?p=1119    http://www.daskeyboard.com/blog/?p=1119
+ redirect 301 /blog/wp-trackback.php?p=1160    http://www.daskeyboard.com/blog/?p=1160
+ redirect 301 /blog/wp-trackback.php?p=1194    http://www.daskeyboard.com/blog/?p=1194
+ redirect 301 /blog/wp-trackback.php?p=1217    http://www.daskeyboard.com/blog/?p=1217
+ redirect 301 /blog/wp-trackback.php?p=1224    http://www.daskeyboard.com/blog/?p=1224
+ redirect 301 /blog/wp-trackback.php?p=1338    http://www.daskeyboard.com/blog/?p=1338
+ redirect 301 /blog/wp-trackback.php?p=1475    http://www.daskeyboard.com/blog/?p=1475
+ redirect 301 /blog/wp-trackback.php?p=1538    http://www.daskeyboard.com/blog/?p=1538
+ redirect 301 /blog/wp-trackback.php?p=1616    http://www.daskeyboard.com/blog/?p=1919
+ redirect 301 /blog/wp-trackback.php?p=1664    http://www.daskeyboard.com/blog/?p=1994
+ redirect 301 /blog/wp-trackback.php?p=1772    http://www.daskeyboard.com/blog/?p=1772
+ redirect 301 /blog/wp-trackback.php?p=1833    http://www.daskeyboard.com/blog/?p=1833
+ redirect 301 /blog/wp-trackback.php?p=2034    http://www.daskeyboard.com/blog/?p=2034
+ redirect 301 /blog/wp-trackback.php?p=2095    http://www.daskeyboard.com/blog/?p=2095
+ redirect 301 /blog/wp-trackback.php?p=2269    http://www.daskeyboard.com/blog/?p=2269
+ redirect 301 /blog/wp-trackback.php?p=2588    http://www.daskeyboard.com/blog/?p=2588
+ redirect 301 /blog/wp-trackback.php?p=260     http://www.daskeyboard.com/blog/?p=260
+ redirect 301 /blog/wp-trackback.php?p=267     http://www.daskeyboard.com/blog/?p=267
+ redirect 301 /blog/wp-trackback.php?p=2741    http://www.daskeyboard.com/blog/?p=2741
+ redirect 301 /blog/wp-trackback.php?p=2841    http://www.daskeyboard.com/blog/?p=2841
+ redirect 301 /blog/wp-trackback.php?p=2988    http://www.daskeyboard.com/blog/?p=2988
+ redirect 301 /blog/wp-trackback.php?p=36      http://www.daskeyboard.com/blog/?p=36
+ redirect 301 /blog/wp-trackback.php?p=409     http://www.daskeyboard.com/blog/?p=409
+ redirect 301 /blog/wp-trackback.php?p=60      http://www.daskeyboard.com/blog/?p=60
+ redirect 301 /blog/wp-trackback.php?p=72      http://www.daskeyboard.com/blog/?p=72
+ redirect 301 /blog/wp-trackback.php?p=873     http://www.daskeyboard.com/blog/?p=873
+ redirect 301 /blog/wp-trackback.php?p=891     http://www.daskeyboard.com/blog/?p=891
+ redirect 301 /blog/wp-trackback.php?p=934     http://www.daskeyboard.com/blog/?p=934
+ redirect 301 /blog/wp-trackback.php?p=955     http://www.daskeyboard.com/blog/?p=955
+ redirect 301 /blog/wp-trackback.php?p=994     http://www.daskeyboard.com/blog/?p=994
+redirect 301 /buzz/ http://www.daskeyboard.com/
+redirect 301 /buzz.php http://www.daskeyboard.com/
+redirect 301 /company-information/education-program/feed/       http://www.daskeyboard.com/company-information/education-program/
+redirect 301 /contact/  http://www.daskeyboard.com/contact-us/
+redirect 301 /contact/  http://www.daskeyboard.com/contact-us/
+redirect 301 /contact.php http://www.daskeyboard.com/contact-us/
+redirect 301 /contact-us.php http://www.daskeyboard.com/contact-us/
+redirect 301 /daskeyboard_model_s_professional.php http://www.daskeyboard.com/model-s-professional/
+redirect 301 /daskeyboardmodelsprofessional.php http://www.daskeyboard.com/model-s-professional/
+redirect 301 /daskeyboard_model_s_professional_silent.php http://www.daskeyboard.com/model-s-professional/
+redirect 301 /daskeyboardmodelsprofessionalsilent.php http://www.daskeyboard.com/products/index.php?filter=.keyboard
+redirect 301 /daskeyboard_model_s_ultimate.php http://www.daskeyboard.com/model-s-ultimate/
+redirect 301 /daskeyboardmodelsultimate.php http://www.daskeyboard.com/model-s-ultimate/
+redirect 301 /daskeyboard_original_professional.ph http://www.daskeyboard.com/model-s-professional/
+redirect 301 /daskeyboard_original_professional.php http://www.daskeyboard.com/model-s-professional/
+redirect 301 /daskeyboardoriginalprofessional.php http://www.daskeyboard.com/model-s-professional/
+redirect 301 /daskeyboard.php.htm http://www.daskeyboard.com
+redirect 301 /daskeyboard.php http://www.daskeyboard.com/model-s-professional/
+# redirect 301 /de/company-information/become-a-reseller/.navbar-collapse       http://www.daskeyboard.com/company-information/become-a-reseller/
+# redirect 301 /de/company-information/press-kit/.navbar-collapse       http://www.daskeyboard.com/company-information/press-kit/
+redirect 301 /default.htm http://www.daskeyboard.com/
+# redirect 301 /de/keycaps/feed/        http://www.daskeyboard.com/de/
+# redirect 301 /de/products/model-s-professional-for-mac/?utm_medium=email&utm_campaign=FREE%20iTunes%20Gift%20Card%20with%20Purchase%20of%20...&utm_source=YMLP&utm_term=t9ee_MacPromotionEmail02.gif  http://www.daskeyboard.com/model-s-professional-for-mac/
+# redirect 301 /de/products/.navbar-collapse    http://www.daskeyboard.com/de/
+redirect 301 /education-discount-program/ http://www.daskeyboard.com/company-information/education-program/
+redirect 301 /edu.php http://www.daskeyboard.com/company-information/education-program/
+redirect 301 /embed.js?pname=wordpress&pver=2.73        http://www.daskeyboard.com/blog/
+redirect 301 /face.html http://www.daskeyboard.com/
+redirect 301 /feed/ http://www.daskeyboard.com/blog/feed/
+redirect 301 /guarantee/) http://www.daskeyboard.com/guarantee/
+redirect 301 guarantee/) http://www.daskeyboard.com/guarantee/
+# redirect 301 /guarantee/.navbar-collapse      http://www.daskeyboard.com/guarantee/
+redirect 301 /guarantee.php http://www.daskeyboard.com/guarantee/
+redirect 301 /guaranty.php      http://www.daskeyboard.com/guarantee/
+redirect 301 /guaranty.php http://www.daskeyboard.com/guarantee/
+redirect 301 /history.php http://www.daskeyboard.com/company-information/our-story/
+redirect 301 /homepage http://www.daskeyboard.com/
+redirect 301 /images/gradient http://www.daskeyboard.com/
+redirect 301 /model-s-professional/images/banner1.jpg /model-s-professional/images/model-s-front.jpg
+redirect 301 /images/icon-professional-speedlimit.png http://www.daskeyboard.com/images/type-faster.png
+redirect 301 /images/icons/facebook-64x64.png http://www.daskeyboard.com/images/icons/daskeyboard-facebook.png
+redirect 301 /images/icon-silent-spedometer.png http://www.daskeyboard.com/images/tactile-click-typing.png
+redirect 301 /images/icons/rss-64x64.png http://www.daskeyboard.com/images/icons/daskeyboard-rss.png
+redirect 301 /images/icons/twitter-64x64.png http://www.daskeyboard.com/images/icons/daskeyboard-twitter.png
+redirect 301 /images/icon-ultimate-disco.png http://www.daskeyboard.com/images/look-cool-typing.png
+redirect 301 /images/icon-ultimate-driving.png http://www.daskeyboard.com/images/enjoy-typing.png
+redirect 301 /images/kit/daskeyboard-logo.eps http://www.daskeyboard.com/images/press-kit/daskeyboard-logo.eps
+redirect 301 /images/logo-blog.png http://www.daskeyboard.com/images/daskeyboard-blog.png
+redirect 301 /images/logo-typrx-blue-bg.png http://www.daskeyboard.com/images/improve-typing-typrx.png
+redirect 301 /images/logo-utc-blue-bg.png http://www.daskeyboard.com/images/ultimate-typing-championship.png
+redirect 301 /images/press-kit/dask-pro-hero-350x180.jpg http://www.daskeyboard.com/images/press-kit/daskeyboard-professional-side.jpg
+redirect 301 /images/press-kit/dask-s-pro-350x174.jpg http://www.daskeyboard.com/images/press-kit/daskeyboard-professional-front.jpg
+redirect 301 /images/press-kit/dask-ult-hero-350x180.jpg http://www.daskeyboard.com/images/press-kit/daskeyboard-ultimate-side.jpg
+redirect 301 /images/press-kit/dask-usb-hub-350x265.jpg http://www.daskeyboard.com/images/press-kit/daskeyboard-usb-ports.jpg
+redirect 301 /images/press-kit/front-view-ult-350x174.jpg http://www.daskeyboard.com/images/press-kit/daskeyboard-ultimate-front.jpg
+redirect 301 /images/products/1.jpg http://www.daskeyboard.com/images/products/keyboard.jpg
+redirect 301 /images/products/2.jpg http://www.daskeyboard.com/images/products/mechanical_keyboard.jpg
+redirect 301 /images/products/accessories/keycaps/caps-wasd-incs-200.jpg http://www.daskeyboard.com/images/products/accessories/keycaps/wasd-keycap-set.jpg
+redirect 301 /images/products/accessories/keycaps/linux-caps-close-180.jpg http://www.daskeyboard.com/images/products/accessories/keycaps/linux-keycap-set.jpg
+redirect 301 /images/products/models/pro-close-up.jpg http://www.daskeyboard.com/images/products/models/pro-keyboard-closeup.jpg
+redirect 301 /images/products/models/pro-silent-close-up.jpg http://www.daskeyboard.com/images/products/models/pro-silent-keyboard-closeup.jpg
+redirect 301 /images/products/models/ultimate-close-up.jpg http://www.daskeyboard.com/images/products/models/ultimate-keyboard-closeup.jpg
+redirect 301 /images/products/models/ultimate-silent-close-up.jpg http://www.daskeyboard.com/images/products/models/ultimate-silent-keyboard-closeup.jpg
+redirect 301 /images/products/pro/1.jpg http://www.daskeyboard.com/images/products/pro/mechanical_keyboard_hero.jpg
+redirect 301 /images/products/pro/2.jpg http://www.daskeyboard.com/images/products/pro/mechanical_keyboard.jpg
+redirect 301 /images/products/ultimate/1.jpg http://www.daskeyboard.com/images/products/ultimate/mechanical_keyboard_hero.jpg
+redirect 301 /images/products/ultimate/2.jpg http://www.daskeyboard.com/images/products/ultimate/mechanical_keyboard.jpg
+redirect 301 /images/face-profile-bigger.jpg http://www.daskeyboard.com/images/front-view-ult-794x395.png
+redirect 301 /images/Windows6.0-KB948643-v2-x86.msu     http://www.daskeyboard.com/
+redirect 301 /index2.php http://www.daskeyboard.com/
+redirect 301 /kit.php http://www.daskeyboard.com/company-information/press-kit/
+redirect 301 /macworld http://www.daskeyboard.com/model-s-professional-for-mac/
+redirect 301 /manual.php        http://www.daskeyboard.com/
+redirect 301 /model-s-professional-media%3Emechanical   http://www.daskeyboard.com/model-s-professional/
+redirect 301 /model-s-professional-media http://www.daskeyboard.com/model-s-professional/
+redirect 301 /model-s-professional-media-soft http://www.daskeyboard.com/model-s-professional-soft/
+redirect 301 /model-s-professional-qu http://www.daskeyboard.com/model-s-professional/
+redirect 301 /model-s-professional-quiet/ http://www.daskeyboard.com/model-s-professional/
+redirect 301 /model-s-professional-silent/ http://www.daskeyboard.com/model-s-professional/
+redirect 301 /model-s-professional-soft/ http://www.daskeyboard.com/model-s-professional/
+redirect 301 /model-s-ultimate/) http://www.daskeyboard.com/model-s-ultimate/
+redirect 301 model-s-ultimate/= http://www.daskeyboard.com/model-s-ultimate/
+redirect 301 /model-s-ultimate-silent/2 http://www.daskeyboard.com/model-s-ultimate/
+redirect 301 /model-s-ultimate-silent   http://www.daskeyboard.com/model-s-ultimate/
+redirect 301 /model-s-ultimate-silent/ http://www.daskeyboard.com/model-s-ultimate/
+redirect 301 /mod http://www.daskeyboard.com/
+# redirect 301 /.navbar-collapse        http://www.daskeyboard.com/products/
+redirect 301 /newsletter        http://www.daskeyboard.com/
+redirect 301 /newsroom.php http://www.daskeyboard.com/company-information/press-kit/
+redirect 301 /ordering.php http://www.daskeyboard.com/products/
+redirectMatch 301 ^/press-kit/?$ http://www.daskeyboard.com/company-information/press-kit/
+redirect 301 /product/5410/ http://www.daskeyboard.com/gaming-sling/
+redirect 301 /product/daskeyboard-space-pen/ http://www.daskeyboard.com/daskeyboard-space-pen/
+redirect 301 /product/gaming-sling/ http://www.daskeyboard.com/gaming-sling/
+redirect 301 /product/hackshield-backpack/ http://www.daskeyboard.com/hackshield-backpack/
+redirect 301 /product/hackshield-messenger-bag/ http://www.daskeyboard.com/hackshield-messenger-bag/
+redirect 301 /product/hackshield-wallet/ http://www.daskeyboard.com/hackshield-wallet/
+redirect 301 /product/model-s-professional-for-mac/ http://www.daskeyboard.com/model-s-professional-for-mac/
+redirect 301 /product/model-s-professional/ http://www.daskeyboard.com/model-s-professional/
+redirect 301 /product/model-s-ultimate/ http://www.daskeyboard.com/model-s-ultimate/
+# redirect 301 /products/gaming-sling/  http://www.daskeyboard.com/products/index.php?filter=.gaming-bag
+redirect 301 /products/model-s-ultimate/ http://www.daskeyboard.com/model-s-ultimate/
+redirect 301 /quote.php http://www.daskeyboard.com/
+redirect 301 /#slide4 http://www.daskeyboard.com/
+ redirect 301 /slideshow/?currentPic=1&directory=.     http://www.daskeyboard.com/slideshow/?currentPic=1
+# redirect 301 /slideshow/?directory=.%A4tPic=1 http://www.daskeyboard.com/
+ redirect 301 /slideshow/?directory=.&currentPic=6     http://www.daskeyboard.com/?currentPic=6
+ redirect 301 /slideshow/index.php?directory=.38&currentPic=-1     http://www.daskeyboard.com/slideshow/?currentPic=1
+ redirect 301 /slideshow/index.php?directory=.&currentPic=2    http://www.daskeyboard.com/slideshow/?currentPic=2
+ redirect 301 /slideshow/index.php?directory=.&currentPic=4    http://www.daskeyboard.com/slideshow/?currentPic=4
+ redirect 301 /slideshow/index.php?directory=.&currentPic=8    http://www.daskeyboard.com/slideshow/?currentPic=8
+ redirect 301 /slideshow/index.php?directory=.&currentPic=9    http://www.daskeyboard.com/slideshow/?currentPic=9
+redirect 301 /specifications.php http://www.daskeyboard.com/model-s-professional/
+redirect 301 /specv1.php        http://www.daskeyboard.com/
+redirect 301 /specv1.php http://www.daskeyboard.com/model-s-professional/
+redirect 301 /support/ https://daskeyboard.mojohelpdesk.com/
+redirect 301 /support.php       http://daskeyboard.mojohelpdesk.com/
+redirect 301 /url/ http://www.daskeyboard.com/
+redirect 301 /v1/big.html http://www.daskeyboard.com/model-s-professional
+redirect 301 /veterans/ http://www.daskeyboard.com/company-information/veteran-program/
+redirect 301 /where-to-buy/[ http://www.daskeyboard.com/where-to-buy/
+redirectMatch 301 ^/products/?$ http://www.daskeyboard.com/products/mechanical-keyboards/
+redirect 301 https://q.daskeyboard.com/download/ http://www.daskeyboard.com/download/
+
+redirect 301 /gaming/mechanical-keyboard/ /x/x40-mechanical-keyboard/
+redirect 301 /gaming/x50-rgb-mechanical-keyboard/ /x/x50-rgb-mechanical-keyboard/
+redirect 301 /gaming/gaming-mouse/ /m/m50-mouse/
+redirect 301 /gaming/mouse-pads/ /accessories/mouse-pads/
+redirect 301 /gaming/bungee/ /accessories/bungee/
+redirect 301 /gaming/top-panels/ /accessories/top-panels/
+#redirection page support to helpdesk
+redirect 301 /support https://daskeyboard.mojohelpdesk.com/
+
+#redirection download x40-m50
+redirect 301 /downloads/ http://www.daskeyboard.com/x40-m50-downloads/
+
+#Redirect the mechanical guide page to blog guide 
+redirect 301 /mechanical-keyboard-guide/ /blog/mechanical-keyboard-guide/
+
+#Redirect the mouse-pad from gaming to acessories/mouse-pads
+redirect 301 /gaming/47w-control/ /accessories/mouse-pads/47w-control/
+redirect 301 /gaming/47w-flex/ /accessories/mouse-pads/47w-flex/
+redirect 301 /gaming/47w-speed/ /accessories/mouse-pads/47w-speed/
+# ======================================================================
+# Apache configuration file
+# httpd.apache.org/docs/2.2/mod/quickreference.html
+
+# Note .htaccess files are an overhead, this logic should be in your Apache
+# config if possible: httpd.apache.org/docs/2.2/howto/htaccess.html
+
+# Techniques in here adapted from all over, including:
+#   Kroc Camen: camendesign.com/.htaccess
+#   perishablepress.com/press/2006/01/10/stupid-htaccess-tricks/
+#   Sample .htaccess file of CMS MODx: modxcms.com
+
+
+# ----------------------------------------------------------------------
+# Better website experience for IE users
+# ----------------------------------------------------------------------
+
+# Force the latest IE version, in various cases when it may fall back to IE7 mode
+#  github.com/rails/rails/commit/123eb25#commitcomment-118920
+# Use ChromeFrame if it's installed for a better experience for the poor IE folk
+
+<IfModule mod_headers.c>
+  Header set X-UA-Compatible "IE=Edge,chrome=1"
+  # mod_headers can't match by content-type, but we don't want to send this header on *everything*...
+  <FilesMatch "\.(appcache|crx|css|eot|gif|htc|ico|jpe?g|js|m4a|m4v|manifest|mp4|oex|oga|ogg|ogv|otf|pdf|png|safariextz|svg|svgz|ttf|vcf|webm|webp|woff|xml|xpi)$">
+    Header unset X-UA-Compatible
+  </FilesMatch>
+</IfModule>
+
+
+
+# ----------------------------------------------------------------------
+# Cross-domain AJAX requests
+# ----------------------------------------------------------------------
+
+# Serve cross-domain Ajax requests, disabled by default.
+# enable-cors.org
+# code.google.com/p/html5security/wiki/CrossOriginRequestSecurity
+
+#  <IfModule mod_headers.c>
+#    Header set Access-Control-Allow-Origin "*"
+#  </IfModule>
+
+
+# ----------------------------------------------------------------------
+# CORS-enabled images (@crossorigin)
+# ----------------------------------------------------------------------
+
+# Send CORS headers if browsers request them; enabled by default for images.
+# developer.mozilla.org/en/CORS_Enabled_Image
+# blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html
+# hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/
+# wiki.mozilla.org/Security/Reviews/crossoriginAttribute
+
+<IfModule mod_setenvif.c>
+  <IfModule mod_headers.c>
+    # mod_headers, y u no match by Content-Type?!
+    <FilesMatch "\.(gif|ico|jpe?g|png|svg|svgz|webp)$">
+      SetEnvIf Origin ":" IS_CORS
+      Header set Access-Control-Allow-Origin "*" env=IS_CORS
+    </FilesMatch>
+  </IfModule>
+</IfModule>
+
+# ----------------------------------------------------------------------
+# Webfont access
+# ----------------------------------------------------------------------
+
+# Allow access from all domains for webfonts.
+# Alternatively you could only whitelist your
+# subdomains like "subdomain.example.com".
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(eot|font.css|otf|ttc|ttf|woff)$">
+    Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
+</IfModule>
+
+# ----------------------------------------------------------------------
+# Proper MIME type for all files
+# ----------------------------------------------------------------------
+
+# JavaScript
+#   Normalize to standard type (it's sniffed in IE anyways)
+#   tools.ietf.org/html/rfc4329#section-7.2
+AddType application/javascript         js jsonp
+AddType application/json               json
+
+# Audio
+AddType audio/mp4                      m4a f4a f4b
+AddType audio/ogg                      oga ogg
+
+# Video
+AddType video/mp4                      mp4 m4v f4v f4p
+AddType video/ogg                      ogv
+AddType video/webm                     webm
+AddType video/x-flv                    flv
+
+# SVG
+#   Required for svg webfonts on iPad
+#   twitter.com/FontSquirrel/status/14855840545
+AddType     image/svg+xml              svg svgz
+AddEncoding gzip                       svgz
+
+# Webfonts
+AddType application/vnd.ms-fontobject  eot
+AddType application/x-font-ttf         ttf ttc
+AddType application/x-font-woff        woff
+AddType font/opentype                  otf
+
+# Assorted types
+AddType application/octet-stream            safariextz
+AddType application/x-chrome-extension      crx
+AddType application/x-opera-extension       oex
+AddType application/x-shockwave-flash       swf
+AddType application/x-web-app-manifest+json webapp
+AddType application/x-xpinstall             xpi
+AddType application/xml                     rss atom xml rdf
+AddType image/webp                          webp
+AddType image/x-icon                        ico
+AddType text/cache-manifest                 appcache manifest
+AddType text/vtt                            vtt
+AddType text/x-component                    htc
+AddType text/x-vcard                        vcf
+
+
+# ----------------------------------------------------------------------
+# Allow concatenation from within specific js and css files
+# ----------------------------------------------------------------------
+
+# e.g. Inside of script.combined.js you could have
+#   <!--#include file="libs/jquery-1.5.0.min.js" -->
+#   <!--#include file="plugins/jquery.idletimer.js" -->
+# and they would be included into this single file.
+
+# This is not in use in the boilerplate as it stands. You may
+# choose to use this technique if you do not have a build process.
+
+#<FilesMatch "\.combined\.js$">
+#  Options +Includes
+#  AddOutputFilterByType INCLUDES application/javascript application/json
+#  SetOutputFilter INCLUDES
+#</FilesMatch>
+
+#<FilesMatch "\.combined\.css$">
+#  Options +Includes
+#  AddOutputFilterByType INCLUDES text/css
+#  SetOutputFilter INCLUDES
+#</FilesMatch>
+
+
+# ----------------------------------------------------------------------
+# Gzip compression
+# ----------------------------------------------------------------------
+
+<IfModule mod_deflate.c>
+
+  # Force deflate for mangled headers developer.yahoo.com/blogs/ydn/posts/2010/12/pushing-beyond-gzipping/
+  <IfModule mod_setenvif.c>
+    <IfModule mod_headers.c>
+      SetEnvIfNoCase ^(Accept-EncodXng|X-cept-Encoding|X{15}|~{15}|-{15})$ ^((gzip|deflate)\s*,?\s*)+|[X~-]{4,13}$ HAVE_Accept-Encoding
+      RequestHeader append Accept-Encoding "gzip,deflate" env=HAVE_Accept-Encoding
+    </IfModule>
+  </IfModule>
+
+  # Compress all output labeled with one of the following MIME-types
+  # (for Apache versions below 2.3.7, you don't need to enable `mod_filter`
+  # and can remove the `<IfModule mod_filter.c>` and `</IfModule>` lines as
+  # `AddOutputFilterByType` is still in the core directives)
+#  <IfModule mod_filter.c>
+    AddOutputFilterByType DEFLATE application/atom+xml \
+                                  application/javascript \
+                                  application/json \
+                                  application/rss+xml \
+                                  application/vnd.ms-fontobject \
+                                  application/x-font-ttf \
+                                  application/xhtml+xml \
+                                  application/xml \
+                                  font/opentype \
+                                  image/svg+xml \
+                                  image/x-icon \
+                                  text/css \
+                                  text/html \
+                                  text/plain \
+                                  text/x-component \
+                                  text/xml
+#  </IfModule>
+
+</IfModule>
+
+
+# ----------------------------------------------------------------------
+# Expires headers (for better cache control)
+# ----------------------------------------------------------------------
+
+# These are pretty far-future expires headers.
+# They assume you control versioning with filename-based cache busting
+# Additionally, consider that outdated proxies may miscache
+#   www.stevesouders.com/blog/2008/08/23/revving-filenames-dont-use-querystring/
+
+# If you don't use filenames to version, lower the CSS and JS to something like
+# "access plus 1 week".
+
+<IfModule mod_expires.c>
+  ExpiresActive on
+
+# Perhaps better to whitelist expires rules? Perhaps.
+  ExpiresDefault                          "access plus 1 month"
+
+# cache.appcache needs re-requests in FF 3.6 (thanks Remy ~Introducing HTML5)
+  ExpiresByType text/cache-manifest       "access plus 0 seconds"
+
+# Your document html
+  ExpiresByType text/html                 "access plus 1 hour"
+
+# Data
+  ExpiresByType application/json          "access plus 1 hour"
+  ExpiresByType application/xml           "access plus 1 hour"
+  ExpiresByType text/xml                  "access plus 1 hour"
+
+# Feed
+  ExpiresByType application/atom+xml      "access plus 1 hour"
+  ExpiresByType application/rss+xml       "access plus 1 hour"
+
+# Favicon (cannot be renamed)
+  ExpiresByType image/x-icon              "access plus 1 month"
+
+# Media: images, video, audio
+  ExpiresByType audio/ogg                 "access plus 1 month"
+  ExpiresByType image/gif                 "access plus 1 month"
+  ExpiresByType image/jpeg                "access plus 1 month"
+  ExpiresByType image/png                 "access plus 1 month"
+  ExpiresByType video/mp4                 "access plus 1 month"
+  ExpiresByType video/ogg                 "access plus 1 month"
+  ExpiresByType video/webm                "access plus 1 month"
+
+# HTC files  (css3pie)
+  ExpiresByType text/x-component          "access plus 1 month"
+
+# Webfonts
+  ExpiresByType application/vnd.ms-fontobject "access plus 1 month"
+  ExpiresByType application/x-font-ttf    "access plus 1 month"
+  ExpiresByType application/x-font-woff   "access plus 1 month"
+  ExpiresByType font/opentype             "access plus 1 month"
+  ExpiresByType image/svg+xml             "access plus 1 month"
+
+# CSS and JavaScript
+  ExpiresByType application/javascript    "access plus 6 month"
+  ExpiresByType text/css                  "access plus 6 month"
+
+</IfModule>
+
+
+# ----------------------------------------------------------------------
+# Prevent 404 errors for non-existing redirected folders
+# ----------------------------------------------------------------------
+
+# without -MultiViews, Apache will give a 404 for a rewrite if a folder of the
+# same name does not exist.
+# webmasterworld.com/apache/3808792.htm
+
+Options -MultiViews
+
+
+# ----------------------------------------------------------------------
+# Custom 404 page
+# ----------------------------------------------------------------------
+
+# You can add custom pages to handle 500 or 403 pretty easily, if you like.
+# If you are hosting your site in subdirectory, adjust this accordingly
+#    e.g. ErrorDocument 404 /subdir/404.html
+ErrorDocument 404 /page-404.php
+
+
+# ----------------------------------------------------------------------
+# UTF-8 encoding
+# ----------------------------------------------------------------------
+
+# Use UTF-8 encoding for anything served text/plain or text/html
+AddDefaultCharset utf-8
+
+# Force UTF-8 for a number of file formats
+AddCharset utf-8 .atom .css .js .json .rss .vtt .xml
